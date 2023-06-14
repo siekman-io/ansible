@@ -34,15 +34,15 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Ansible Playbooks Siekman.io</h3>
+<h3 align="center">project_title</h3>
 
   <p align="center">
-    My Ansible Playbooks free to use ( Soon Complete)
+    project_description
     <br />
-    <a href="https://github.com/siekman-io/ansible"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://siekman.io">Website</a>
+    <a href="https://github.com/github_username/repo_name">View Demo</a>
     ·
     <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
     ·
