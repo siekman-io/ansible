@@ -85,7 +85,7 @@ Clone the repo with the following command:
 * Be sure you can connect to the server with ssh
 * Be sure you have installed Ansible on your Mac or Linux machine.
 * Specify the host in the inventory file in the root of the folder.
-** Run a test for playbook with the following command in the folder.
+* Run a test for playbook with the following command in the folder.
    ```sh
    ansible-playbook playbook_name.yml --check -vvv
    or
