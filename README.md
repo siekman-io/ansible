@@ -109,8 +109,8 @@ The playbooks in this collection , and the announce of the ones in the making.
 Its a continuous work in progress.
 
 - [ ] create-playbook (soon)
-- [ ] Update Systems (soon)
-- [x] Monitoring Playbooks
+- [ ] update Systems (soon)
+- [x] _Monitoring Playbooks_
     - [x] install-snmp (install SNMP on your Debian or RedHat servers)
     - [ ] ..
 
