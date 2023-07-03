@@ -1,0 +1,27 @@
+#####################################################
+# ANSIBLE-PLAYBOOK 
+#####################################################
+#        _      _                            _
+#    ___(_) ___| | ___ __ ___   __ _ _ __   (_) ___
+#   / __| |/ _ \ |/ / '_ ` _ \ / _` | '_ \  | |/ _ \
+#   \__ \ |  __/   <| | | | | | (_| | | | |_| | (_) |
+#   |___/_|\___|_|\_\_| |_| |_|\__,_|_| |_(_)_|\___/                 
+#
+#              Created by Jouke Siekman
+#             Netherlands 2023 Leerbroek
+#                https://siekman.io
+#
+#####################################################
+## TASKS : Enable en restart services
+#####################################################
+---
+
+    - name: Enable service snmpd, and not touch the state
+      ansible.builtin.service:
+        name: snmpd
+        enabled: yes
+
+    - name: Restart service snmpd, in all cases
+      ansible.builtin.service:
+        name: snmpd
+        state: restarted

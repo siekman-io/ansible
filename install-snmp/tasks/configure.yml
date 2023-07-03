@@ -1,0 +1,51 @@
+#####################################################
+# ANSIBLE-PLAYBOOK 
+#####################################################
+#        _      _                            _
+#    ___(_) ___| | ___ __ ___   __ _ _ __   (_) ___
+#   / __| |/ _ \ |/ / '_ ` _ \ / _` | '_ \  | |/ _ \
+#   \__ \ |  __/   <| | | | | | (_| | | | |_| | (_) |
+#   |___/_|\___|_|\_\_| |_| |_|\__,_|_| |_(_)_|\___/                 
+#
+#              Created by Jouke Siekman
+#             Netherlands 2023 Leerbroek
+#                https://siekman.io
+#
+#####################################################
+## TASKS : Configure snmp
+#####################################################
+---
+
+    - name: configuring snmpd.conf
+      lineinfile:
+        dest: "{{ file_dest }}"
+        regexp: "{{ item.regexp }}"
+        line: "{{ item.line }}"
+        backup: true
+      with_items:
+        - { dest: '"{{ file_dest }}"', regexp: 'sysLocation', line: 'sysLocation {{snmp_location}}' }
+        - { dest: '"{{ file_dest }}"', regexp: 'sysContact', line: 'sysContact {{snmp_contact}}' }
+        - { dest: '"{{ file_dest }}"', regexp: '^rocommunity  public default -V systemonly', line: '#rocommunity  public default -V systemonly' }
+        - { dest: '"{{ file_dest }}"', regexp: '^rocommunity6 public default -V systemonly', line: '#rocommunity6 public default -V systemonly' }
+    
+    - name: Change listening address
+      ansible.builtin.lineinfile:
+       path: "{{ file_dest }}"
+       search_string: 'agentaddress 127.0.0.1'
+       line: agentaddress 0.0.0.0
+
+    - name: insert access control view snmp.conf
+      lineinfile:
+        path: "{{ file_dest }}"
+        insertafter: "^# Views" 
+        line: "view   systemonly  included   .1"
+        firstmatch: yes
+        state: present  
+
+    - name: Add readonly community snmp.conf
+      lineinfile:
+        path: "{{ file_dest }}"
+        insertafter: "^# Read-only access to everyone to the systemonly view" 
+        line: "rocommunity  {{snmp_community}}  default -V systemonly"
+        firstmatch: yes
+        state: present   
