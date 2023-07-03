@@ -1,11 +1,22 @@
+<!--
+####################################################
+# ANSIBLE-PLAYBOOK README.md
+#####################################################
+#        _      _                            _
+#    ___(_) ___| | ___ __ ___   __ _ _ __   (_) ___
+#   / __| |/ _ \ |/ / '_ ` _ \ / _` | '_ \  | |/ _ \
+#   \__ \ |  __/   <| | | | | | (_| | | | |_| | (_) |
+#   |___/_|\___|_|\_\_| |_| |_|\__,_|_| |_(_)_|\___/                 
+#
+#              Created by Jouke Siekman
+#             Netherlands 2023 Leerbroek
+#                https://siekman.io
+#
+#####################################################
+## README.MD {{playbook_name}}
+#####################################################
+-->
 <a name="readme-top"></a>
-
-<!--[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
@@ -18,9 +29,9 @@
   <h3 align="center">{{playbook_name}}</h3>
 
   <p align="center">
-    {{playbook_name}} {{playbook_details}} 
+    {{playbook_details}} 
     <br />
-    <a href="https://github.com/{{github_user}}{{playbook_name}}"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/{{github_user}}/{{playbook_name}}"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/{{github_user}}/{{playbook_name}}">View Demo</a>
@@ -81,7 +92,7 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-_You can clone this project the following wat._
+_You can clone this project with the following command._
 
 
 1. Clone the repo
@@ -125,15 +136,6 @@ Project Link: [https://github.com/{{github_user}}/ansible](https://github.com/{{
 Would you like to support me. Thats really nice you can support me by the following ways:
 
 ["Buy Me A Coffee"]
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
