@@ -13,7 +13,7 @@
 # Folder to ignore
 snippets
 group_vars
-create_playbook
+create-playbook
 
 # Files to ignore
 itswrong.bad
