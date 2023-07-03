@@ -112,7 +112,7 @@ Its a continuous work in progress.
 - [ ] Update Systems (soon)
 - [x] Monitoring Playbooks
     - [x] install-snmp (install SNMP on your Debian or RedHat servers)
-    - [ ] 
+    - [ ] ..
 
 
 
