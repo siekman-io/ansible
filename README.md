@@ -111,7 +111,7 @@ Its a continuous work in progress.
 - [ ] create-playbook (soon)
 - [ ] Update Systems (soon)
 - [x] Monitoring Playbooks
-    - [x] Install SNMP on linux servers 
+    - [x] install-snmp (install SNMP on your Debian or RedHat servers)
     - [ ] 
 
 
