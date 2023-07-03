@@ -85,9 +85,17 @@ Clone the repo with the following command:
 
 * Be sure you can connect to the server with ssh
 * Specify the host in the inventory file in the root of the folder.
+** Run a test for playbook with the following command in the folder.
+   ```sh
+   ansible-playbook install-snmp.yml --check -vvv
+   or
+   ansible-playbook -l (hostgroup) install-snmp.yml --check -vvv
+   ```
 * Run the playbook with the following command in the folder.
    ```sh
    ansible-playbook install-snmp.yml
+   or
+   ansible-playbook -l (hostgroup) install-snmp.yml
    ```
 * Set the community name
 * Set the sysLocation
