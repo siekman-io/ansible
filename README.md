@@ -37,7 +37,6 @@
   <p align="center">
     My collection of ansible playbooks
     <br />
-    <a href="https://github.com/siekman-io/ansible/install-snmp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/siekman-io/ansible">View Demo</a>
