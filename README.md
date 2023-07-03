@@ -102,7 +102,17 @@ Clone the repo with the following command:
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
+<!-- GETTING STARTED -->
+## List of Playbooks
 
+The playbooks in this collection , and the announce of the ones in the making. 
+Its a continuous work in progress.
+
+- [ ] create-playbook (soon)
+- [ ] Update Systems (soon)
+- [x] Monitoring Playbooks
+    - [x] Install SNMP on linux servers 
+    - [ ] 
 
 
 
