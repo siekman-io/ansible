@@ -19,7 +19,13 @@
       when:
         - ansible_pkg_mgr == "apt"
 
-    - name: Upgrade all packages AlmaLinux / Arch
+    - name: Upgrade all packages Arch
+      ansible.builtin.pacman:
+        upgrade: yes
+      when:
+        - ansible_pkg_mgr == "pacman"
+
+    - name: Upgrade all packages AlmaLinux
       ansible.builtin.dnf:
         name: "*"
         state: latest
