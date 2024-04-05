@@ -4,25 +4,16 @@
 #   / __| |/ _ \ |/ / '_ ` _ \ / _` | '_ \  | |/ _ \
 #   \__ \ |  __/   <| | | | | | (_| | | | |_| | (_) |
 #   |___/_|\___|_|\_\_| |_| |_|\__,_|_| |_(_)_|\___/
-#                   Update Hosts
+#         Variables of project
 #              Created by Jouke Siekman
 #             Netherlands 2023 Leerbroek
 #                https://siekman.io
 #####################################################
-## Update All ( Every packagemanager)
+## Variables of project
 #####################################################
 
----
 
- - name: Update Linux hosts
-   hosts: xmr2
-   #hosts: “{{target}}”
-   become: true
-   become_user: root
-   vars:
-    favcolor: blue
-   vars_files:
-    - vars.yml
-   tasks: 
-    - name: Updating hosts with all packagemanagers
-      include_tasks: update.yml
+# Configuration parameters
+disk: "vdb"
+
+wallet: "47FN5H4DkvHBmJXmhcH7HggAakgSTnohNMu4DCQgRZBE7bCZekvpteffKrTUgBjX8S7haVHSZz9zMVtWG7uDREDSRCJbkED"

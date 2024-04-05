@@ -1,26 +1,17 @@
 #####################################################
-# ANSIBLE-PLAYBOOK 
-#####################################################
 #        _      _                            _
 #    ___(_) ___| | ___ __ ___   __ _ _ __   (_) ___
 #   / __| |/ _ \ |/ / '_ ` _ \ / _` | '_ \  | |/ _ \
 #   \__ \ |  __/   <| | | | | | (_| | | | |_| | (_) |
-#   |___/_|\___|_|\_\_| |_| |_|\__,_|_| |_(_)_|\___/                 
-#
+#   |___/_|\___|_|\_\_| |_| |_|\__,_|_| |_(_)_|\___/
+#                  <Project name>
 #              Created by Jouke Siekman
 #             Netherlands 2024 Leerbroek
 #                https://siekman.io
-#
 #####################################################
-## Copy README.MD
+## Reboot hosts
 #####################################################
----
 
-    - name: Copy default playbook files
-      ansible.builtin.copy:
-        src: "{{ copy_items1 }}"
-        dest: '{{directory}}/{{playbook_name}}'
-      loop:
-        - ./files/README.md
-      loop_control:
-        loop_var: copy_items1
+- name: Reboot machine and send a message
+  ansible.builtin.reboot:
+    msg: "Rebooting machine in 5 seconds"

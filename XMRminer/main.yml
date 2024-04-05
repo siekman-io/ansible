@@ -15,8 +15,7 @@
 ---
 
  - name: Update Linux hosts
-   hosts: xmr2
-   #hosts: “{{target}}”
+   hosts: xmr1:xmr2
    become: true
    become_user: root
    vars:
@@ -24,5 +23,7 @@
    vars_files:
     - vars.yml
    tasks: 
-    - name: Updating hosts with all packagemanagers
+    - name: Updating hosts and install packages
       include_tasks: update.yml
+    - name: Start the miners
+      include_tasks: startxmr.yml

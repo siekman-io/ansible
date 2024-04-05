@@ -4,25 +4,13 @@
 #   / __| |/ _ \ |/ / '_ ` _ \ / _` | '_ \  | |/ _ \
 #   \__ \ |  __/   <| | | | | | (_| | | | |_| | (_) |
 #   |___/_|\___|_|\_\_| |_| |_|\__,_|_| |_(_)_|\___/
-#                   Update Hosts
+#                  <Project name>
 #              Created by Jouke Siekman
 #             Netherlands 2023 Leerbroek
 #                https://siekman.io
 #####################################################
-## Update All ( Every packagemanager)
+## <DETAILS ABOUT FILE>
 #####################################################
 
----
-
- - name: Update Linux hosts
-   hosts: xmr2
-   #hosts: “{{target}}”
-   become: true
-   become_user: root
-   vars:
-    favcolor: blue
-   vars_files:
-    - vars.yml
-   tasks: 
-    - name: Updating hosts with all packagemanagers
-      include_tasks: update.yml
+- name: Execute the command in remote shell; stdout goes to the specified file on the remote
+  ansible.builtin.shell: screen -S xmr -dm sudo /snap/xmrig/20/bin/xmrig --coin 'monero' -o xmrpool.eu:5555 -u '{{ wallet }}'+$(hostname) -p x -t3 --cpu-no-yield

@@ -4,25 +4,32 @@
 #   / __| |/ _ \ |/ / '_ ` _ \ / _` | '_ \  | |/ _ \
 #   \__ \ |  __/   <| | | | | | (_| | | | |_| | (_) |
 #   |___/_|\___|_|\_\_| |_| |_|\__,_|_| |_(_)_|\___/
-#                   Update Hosts
+#                  <Project name>
 #              Created by Jouke Siekman
 #             Netherlands 2023 Leerbroek
 #                https://siekman.io
 #####################################################
-## Update All ( Every packagemanager)
+## <DETAILS ABOUT FILE>
 #####################################################
 
----
+- name: Run the equivalent of "apt-get update" as a separate step
+  ansible.builtin.apt:
+    update_cache: yes
 
- - name: Update Linux hosts
-   hosts: xmr2
-   #hosts: “{{target}}”
-   become: true
-   become_user: root
-   vars:
-    favcolor: blue
-   vars_files:
-    - vars.yml
-   tasks: 
-    - name: Updating hosts with all packagemanagers
-      include_tasks: update.yml
+- name: Update all packages to their latest version
+  ansible.builtin.apt:
+    name: "*"
+    state: latest
+    
+- name: Install a list of packages
+  ansible.builtin.apt:
+    pkg:
+    - screen
+    - mc
+    - htop
+    - snapd 
+    
+- name: Install xmrig
+  community.general.snap:
+    name: xmrig
+    classic: yes

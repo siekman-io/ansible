@@ -21,6 +21,7 @@ my_url: 'https://siekman.io'
 github_user: 'siekman-io'
 github_repo: 'ansible'
 
+
 # Contact Details
 my_email: 'info@siekman.io'
 my_twitter: 'https://twitter.com/JoukeSiekman'
@@ -28,3 +29,4 @@ my_linkedin: 'https://www.linkedin.com/in/jouke-siekman'
 
 # Playbook variables
 directory: '~/Data/Scripts/ansible'
+year: '2024'
